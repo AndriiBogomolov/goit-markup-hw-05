@@ -130,6 +130,8 @@ ul {
 .nav-studio,
 .nav-portfolio,
 .nav-contact {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
     color: var(--accent-color);
     font-weight: 500;
@@ -177,6 +179,8 @@ ul {
 }
 
 .contact-icon {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     margin-right: 10px;
     fill: currentColor;
@@ -190,6 +194,8 @@ ul {
 
 .mail,
 .tel {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -225,6 +231,8 @@ ul {
 }
 
 .button-all {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -238,6 +246,8 @@ ul {
 }
 
 .all-web {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -252,6 +262,8 @@ ul {
 }
 
 .apps {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -266,6 +278,8 @@ ul {
 }
 
 .design {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -280,6 +294,8 @@ ul {
 }
 
 .marketing {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -336,6 +352,7 @@ ul {
     flex-basis: calc(100% / 3 - var(--typical-gap));
     margin-bottom: var(--typical-gap);
     margin-right: var(--typical-gap);
+    /* position: relative; */
 }
 
 .card-item:nth-child(3n) {
@@ -350,10 +367,6 @@ ul {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.img-portfolio {
-    display: block;
-}
-
 .item-content {
     padding: 20px 24px;
     border-bottom: 1px solid #ECECEC;
@@ -363,6 +376,30 @@ ul {
 
 .main-title {
     margin-bottom: 4px;
+}
+
+.card-item:hover .action-thumb-text {
+    transform: translateY(0);
+}
+
+.action-thumb-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-thumb {
+    position: relative;
+    overflow: hidden;
 }
 
 /* Sections */
@@ -401,7 +438,9 @@ img {
     width: 696px;
 }
 
-.btn {
+.hero-btn {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     display: block;
     background-color: var(--title-text-color);
     font-family: inherit;
@@ -409,15 +448,24 @@ img {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    border-radius: 4px;
     text-align: center;
     text-decoration: none;
     border: 1px solid transparent;
     margin: 0 auto;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     border: none;
     width: 200px;
     height: 50px;
+    align-items: center;
+    color:var(--white-color);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #188CE8;
+    color: var(--white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .overlay {
@@ -527,6 +575,26 @@ img {
     margin-left: var(--typical-gap);
 }
 
+.thumb-to-do {
+    position: relative;
+}
+
+.description-to-do {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
 /* Section-3 */
 
 .team-members {
@@ -619,6 +687,8 @@ img {
 }
 
 .masters-social-link {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -652,6 +722,7 @@ img {
 }
 
 .clients-link {
+    position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
@@ -754,7 +825,6 @@ img {
 
 .footer-social-list {
     display: flex;
-    /* justify-content: right; */
 }
 
 .footer-social-item {
@@ -767,6 +837,8 @@ img {
 }
 
 .footer-social-link {
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -785,4 +857,54 @@ img {
 .footer-social-link:focus {
     background-color: var(--title-text-color);
     color: var(--white-color);
+}
+
+/* Modal */
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: rotate(360deg) scale(0.1) translate(150px);
+    transition: 1000ms, visibility 0s 1s;
+}
+
+.backdrop {
+    position: fixed;
+    transition: transform 1000ms, cubic-bezier(0.4, 0, 0.2, 1) visibility 1s 0s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
