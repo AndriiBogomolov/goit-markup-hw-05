@@ -167,6 +167,7 @@ ul {
     content: '';
     position: absolute;
     height: 4px;
+    display: block;
     background-color: var(--title-text-color);
     bottom: -1px;
     width: 100%;
@@ -175,6 +176,10 @@ ul {
     
 }
 
+.current {
+    position: relative;
+    color: var(--title-text-color);
+}
 
 
 /* Email and telephone */
